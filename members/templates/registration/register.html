@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %} Register {% endblock %}
+{% block content %} 
+
+
+<h1>Register...</h1>
+<br></br>
+<div class="form-group">
+<form method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <button class="btn btn-secondary">Register</button>
+    <br></br>
+    <div style="display: flex; align-items: center;">
+        <h6 style="margin-right: 20x;">Already have an account?</h6>
+        <a style="color: rgb(25, 201, 213); padding-bottom: 9px; margin-left: 8px;" class="nav-link" href="{% url 'login' %}" >Login</a>
+    </div>
+    </form>
+</div>
+{% endblock %}
